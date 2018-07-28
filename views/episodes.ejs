@@ -1,0 +1,26 @@
+<%include partials/header%>
+<div style = "padding-top: 10%">
+    <h1 style = "text-align:center"><i class="fas fa-film"></i> Movie Review!!</h1>
+    
+    <p style = "text-align:center">Search For A TV Series Episode</p>
+    <div style= "width:30%; margin: 40 auto">
+        <form action = "/episoderesults" method = "GET">
+            <div class = "form-group">
+                <input class = "form-control" "form-control form-rounded" type = "text"   placeholder = "Search for a TV Series" name = "search">
+            </div>
+            <div class = "form-group">
+                <input class = "form-control" "form-control form-rounded" type = "text"   placeholder = "Season No." name = "search1">
+            </div>
+            <div class = "form-group">
+                <input class = "form-control" "form-control form-rounded" type = "text"   placeholder = "Episode No." name = "search2">
+            </div>
+            
+            <div class = "form-group">
+                <button class="ui fluid black button">Search</button>
+            </div>
+           
+        </form>
+    </div>
+</div>
+
+<%include partials/footer%>

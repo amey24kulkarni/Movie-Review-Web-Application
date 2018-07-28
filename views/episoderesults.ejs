@@ -1,0 +1,64 @@
+<%include partials/header%>
+
+ <%if(data["Response"] == "True"){%>
+    <div style = "padding-top:2.5%">
+        <div class = "ui main text container segment">
+            <div style = "text-align:center">
+                <h2 class = "30">S<%=data["Season"]%>E<%=data["Episode"]%> : <%=data["Title"]%> <span style ="font-size:20">(<%= data["Year"]%>%>)</span></h2>        
+                    <img class = "img-thumbnail rounded" src = "<%=data["Poster"]%>" style = "height:300px" "width:200px">
+                </div>
+                <p> </p>
+            
+            <p><strong>Genre: </strong><%=data["Genre"]%></p>
+            <p><strong>Description: </strong><%=data["Plot"]%></p>
+            <p><strong>Cast: </strong><%=data["Actors"]%></p>
+            <%if(Number(data["imdbRating"]) > 1.0 && Number(data["imdbRating"]) < 1.9){%>
+                <p><strong>IMDB Rating: <i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i> </strong><%=data["imdbRating"]%>/10 Based on <%=data["imdbVotes"]%> Ratings</p>
+                <%}%>
+            <% if(Number(data["imdbRating"]) > 2.0 && Number(data["imdbRating"]) < 2.9 ){%>
+                 <p><strong>IMDB Rating: <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i> </strong><%=data["imdbRating"]%>/10 Based on <%=data["imdbVotes"]%> Ratings</p>
+                <%}%>
+            <%if(Number(data["imdbRating"]) > 3.0 && Number(data["imdbRating"]) < 3.9){%>
+                <p><strong>IMDB Rating: <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i> </strong><%=data["imdbRating"]%>/10 Based on <%=data["imdbVotes"]%> Ratings</p>
+                <%}%>
+            <%if(Number(data["imdbRating"]) > 4.0 && Number(data["imdbRating"]) < 4.9){%>
+            <p><strong>IMDB Rating: <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i> </strong><%=data["imdbRating"]%>/10 Based on <%=data["imdbVotes"]%> Ratings</p>
+            
+                <%}%>
+            <%if(Number(data["imdbRating"]) > 5.0 && Number(data["imdbRating"]) < 5.9){%>
+            <p><strong>IMDB Rating: <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i> </strong><%=data["imdbRating"]%>/10 Based on <%=data["imdbVotes"]%> Ratings</p>
+            
+                <%}%>
+            <%if(Number(data["imdbRating"]) > 6.0 && Number(data["imdbRating"]) < 6.9){%>
+            <p><strong>IMDB Rating: <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i> </strong><%=data["imdbRating"]%>/10 Based on <%=data["imdbVotes"]%> Ratings</p>
+                <%}%>
+            <%if(Number(data["imdbRating"]) > 7.0 && Number(data["imdbRating"]) < 7.9){%>
+            <p><strong>IMDB Rating: <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i> </strong><%=data["imdbRating"]%>/10 Based on <%=data["imdbVotes"]%> Ratings</p>
+                <%}%>
+            <%if(Number(data["imdbRating"]) > 8.0 && Number(data["imdbRating"]) < 8.9){%>
+            <p><strong>IMDB Rating: <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> </strong><%=data["imdbRating"]%>/10 Based on <%=data["imdbVotes"]%> Ratings</p>
+                <%}%>
+            <%if(Number(data["imdbRating"]) > 9.0 && Number(data["imdbRating"]) < 9.9){%>
+            <p><strong>IMDB Rating: <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> </strong><%=data["imdbRating"]%>/10 Based on <%=data["imdbVotes"]%> Ratings</p>
+                <%}%>
+            <%if(Number(data["imdbRating"]) == 10.0){%>
+            <p><strong>IMDB Rating: <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> </strong><%=data["imdbRating"]%>/10 Based on <%=data["imdbVotes"]%> Ratings</p>
+                <%}%>
+            
+            
+    </div>    
+</div>
+<%}%>
+
+<%if(data["Response"] == "False"){%>
+
+<div style = "padding-top: 12.5%">
+     <div class = "ui main text container segment">
+          <div style = "text-align:center">
+                <i class="fas fa-tv fa-5x"></i>
+                <h1>TV Series Not Found</h1>
+          </div>
+     </div>
+</div>
+<%}%>
+<%include partials/footer%>
